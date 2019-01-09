@@ -1,0 +1,39 @@
+{
+  "name": "angular-laydate",
+  "version": "1.0.0",
+  "description": "angular-laydate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo no test case",
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "author": "waveng",
+  "dependencies": {
+    "jquery": "2.1.4",
+    "angular": "^1.5.0",
+    "layui-laydate": "^5.0.9"
+  },
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^1.8.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-serv": "0.0.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-processhtml": "^1.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "jshint": "^2.9.5",
+    "del": "^2.2.0",
+    "open": "0.0.5",
+    "source-map": "^0.7.3"
+  }
+}
