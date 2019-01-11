@@ -8,7 +8,7 @@
 ## Usage
 
 ```js
-var app = angular.module('myApp', ['$nglaydate']);
+var app = angular.module('myApp', ['$ngLaydate']);
 
 ```
 ## Samples
