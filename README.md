@@ -1,8 +1,8 @@
 
 
 # angular-laydate
-[layDate](https://www.layui.com/laydate/) (日期与时间组件)的 angular 组件
-[layDate](https://www.layui.com/laydate/) (日期与时间组件)的 angular 集成
+[layDate](https://www.layui.com/laydate/) (日期与时间组件)的 angular 组件  
+[layDate](https://www.layui.com/laydate/) (日期与时间组件)的 angular 集成  
 
 
 ## Usage
