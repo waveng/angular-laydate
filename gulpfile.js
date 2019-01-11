@@ -1,7 +1,4 @@
 const gulp = require('gulp');
-const templateCache = require('gulp-angular-templatecache');
-const del = require('del');
-const path = require('path');
 const plugins = require('gulp-load-plugins')();
 const open = require('open');
 
@@ -63,10 +60,7 @@ gulp.task('eslint', function () {
      app.prdPath + '*'
     ], {
       read: false
-    })
-    .pipe(plugins.clean({
-      force: true
-    }));
+    });
   });
   /**
   gulp.task('clean', function (cb) {
@@ -75,18 +69,13 @@ gulp.task('eslint', function () {
   */
 
 // 总任务
-gulp.task('build', ['clean', 'eslint', 'js', 'copy-laydate']);
+gulp.task('build', ['clean', 'copy-laydate', 'eslint', 'js']);
 
 // 服务
 gulp.task('serve', ['build'], function () {
-  plugins.connect.server({ //启动一个服务器
-    root: [app.devServe], // 服务器从哪个路径开始读取，默认从开发路径读取
-    livereload: true, // 自动刷新
-    port: 5566
-  });
   // 打开浏览器
   setTimeout(() => {
-    open('http://localhost:8080/index.html')
+    open('index.html')
   }, 200);
   // 监听
   gulp.watch(app.srcPath + '**/*.js', ['eslint', 'js']);
@@ -94,3 +83,4 @@ gulp.task('serve', ['build'], function () {
 
 // 定义default任务
 gulp.task('default', ['serve']);
+

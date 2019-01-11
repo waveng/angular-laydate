@@ -2,7 +2,7 @@
   "name": "angular-laydate",
   "version": "1.0.0",
   "description": "angular-laydate",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo no test case",
     "build": "gulp build",
@@ -10,7 +10,6 @@
   },
   "author": "waveng",
   "dependencies": {
-    "jquery": "^2.1.4",
     "angular": "^1.5.0",
     "layui-laydate": "^5.0.9"
   },
