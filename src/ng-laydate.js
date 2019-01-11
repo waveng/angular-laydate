@@ -2,7 +2,8 @@
  * @Author: wangle_r@163.com
  * @Date: 2019-01-11 18:05:44
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-01-11 18:07:06
+ * @Last Modified time: 2019-01-11 18:53:46
+ * @project <a>https://github.com/waveng/angular-laydate</a>
  */
 (function (root, factory) {
     root.$ngLaydate = factory(root.angular, root);
