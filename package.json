@@ -1,14 +1,29 @@
 {
   "name": "angular-laydate",
   "version": "1.0.0",
-  "description": "angular-laydate",
-  "main": "index.html",
+  "description": "Laydate(日期与时间组件)的 angular 组件",
+  "main": "index.js",
+  "filename": "dist/ng-laydate.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waveng/angular-laydate"
+  },
+  "keywords": [
+    "angular-laydate",
+    "angular-laydate.js",
+    "laydate"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
   "scripts": {
-    "test": "echo no test case",
     "build": "gulp build",
     "start": "gulp"
   },
-  "author": "waveng",
+  "author": "wangle_r@163.com",
   "dependencies": {
     "angular": "^1.5.0",
     "layui-laydate": "^5.0.9"
