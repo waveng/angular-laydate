@@ -1,6 +1,8 @@
 const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')();
 const open = require('open');
+// const del = require('del');
+const gulpSequence = require('gulp-sequence');
 
 const app = {
   srcPath: 'src/', // 源代码
@@ -12,7 +14,7 @@ const JS_APP = [
 ];
 
 gulp.task('copy-laydate', function () {
-  gulp.src(['node_modules/layui-laydate/dist/**'])
+  return gulp.src(['node_modules/layui-laydate/dist/**'])
     .pipe(gulp.dest(app.prdPath + 'laydate/'));
 });
 /*
@@ -56,20 +58,16 @@ gulp.task('eslint', function () {
 
 
  gulp.task('clean', function () {
-    gulp.src([
+  return gulp.src([
      app.prdPath + '*'
     ], {
       read: false
-    });
+    })
+    .pipe(plugins.clean());
   });
-  /**
-  gulp.task('clean', function (cb) {
-    del(app.prdPath + '*', cb);
-  });
-  */
 
 // 总任务
-gulp.task('build', ['clean', 'copy-laydate', 'eslint', 'js']);
+gulp.task('build',  gulpSequence('clean', ['copy-laydate', 'eslint', 'js']));
 
 // 服务
 gulp.task('serve', ['build'], function () {
@@ -82,5 +80,5 @@ gulp.task('serve', ['build'], function () {
 });
 
 // 定义default任务
-gulp.task('default', ['serve']);
+gulp.task('default', ['build']);
 
